@@ -12,3 +12,32 @@ a {
   font-size: 20px;
   padding: 4rem 4rem 1rem 4rem;
 }
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 5rem;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  animation: typing 8s steps(8, start) infinite, blink 0.75s infinite;
+}
