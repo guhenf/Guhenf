@@ -1,9 +1,15 @@
+import Header from "./html/header"
+import Main from "./html/main"
+import Footer from "./html/footer"
+
 function App() {
 
   return (
-    <>
-      <h1 className='text-red-600 text-6xl'>Guhenf Website</h1>
-    </>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   )
 }
 

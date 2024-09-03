@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+  @apply text-yellow-500 hover:text-yellow-700 underline;
+}
+
+:root {
+  background-color: #f4f4f4;
+
+  font-size: 20px;
+  padding: 4rem 4rem 1rem 4rem;
+}
