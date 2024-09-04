@@ -9,7 +9,7 @@ a {
 :root {
   background-color: #f4f4f4;
 
-  font-size: 20px;
+  font-size: 24px;
   padding: 4rem 4rem 1rem 4rem;
 }
 
@@ -18,7 +18,7 @@ a {
     width: 0;
   }
   50% {
-    width: 5rem;
+    width: 16rem;
   }
   100% {
     width: 0;
@@ -37,7 +37,7 @@ a {
 
 .typing-effect {
   overflow: hidden;
-  border-right: 2px solid black;
+  border-right: 3px solid black;
   white-space: nowrap;
-  animation: typing 8s steps(8, start) infinite, blink 0.75s infinite;
+  animation: typing 7s steps(7, start) infinite, blink 0.75s infinite;
 }

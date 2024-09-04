@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react'
 
 import Repo from '../types/repos'
 import RepoCard from '../components/repoCard'
+import meImg from '../assets/me.jpeg'
+import { LinkedlnIcon } from '../svg/linkedin.tsx'
+import { GithubIcon } from '../svg/github.tsx'
 
 const techs = [
   'HTML',
@@ -31,8 +34,23 @@ function Main() {
 
   return (
     <section className='flex-grow'>
-      <div className='py-10'>
-        <h2>Eu resumido.</h2>
+      <div className='py-8 grid grid-cols-2 w-fit '>
+        <img
+          src={meImg}
+          className='max-w-32 rounded-full row-span-2 mr-6 ring-4 ring-slate-300'
+        />
+        <p className='text-lg text-right'>guhenf@gmail.com</p>
+        <div className='flex gap-4'>
+          <a target='_blank' href='https://www.linkedin.com/in/guhenf/'>
+            <LinkedlnIcon />
+          </a>
+          <a target='_blank' href='https://github.com/guhenf'>
+            <GithubIcon />
+          </a>
+        </div>
+      </div>
+
+      <div className='leading-relaxed'>
         <p>
           Iniciei meus estudos em Desenvolvimento Web em busca de uma
           recolocação no mercado de trabalho. Desde jovem, tive contato com
@@ -49,11 +67,11 @@ function Main() {
           de Sistemas pela Faculdade Estácio.
         </p>
         <p>
-          Meus estudos em Desenvolvimento Web me possibilitaram realizar alguns
-          trabalhos. Dentre eles, destaco a criação de algumas Landing Pages,
-          ajustes em sites e interfaces front-end em projetos de terceiros. Na
-          realização desses trabalhos, utilizei e adquiri mais conhecimento
-          sobre as seguintes tecnologias:
+          Os estudoss me possibilitaram realizar alguns trabalhos. Dentre eles,
+          destaco a criação de algumas Landing Pages, ajustes em sites e
+          interfaces front-end em projetos de terceiros. Na realização desses
+          trabalhos, utilizei e adquiri mais conhecimento sobre as seguintes
+          tecnologias:
         </p>
 
         <ul className='grid grid-rows-5 grid-flow-col list-disc px-6'>
@@ -64,13 +82,8 @@ function Main() {
       </div>
 
       <div>
-        <h2>
-          Repositorios publicos em meu github! Acesse-o em{' '}
-          <a target='_blank' href='https://github.com/guhenf'>
-            github/guhenf
-          </a>
-        </h2>
-        <ul className='grid grid-cols-4 gap-4'>
+        <h2 className='my-6'>Projetos pessoais e públicos em meu github!</h2>
+        <ul className='grid grid-cols-4 gap-2'>
           {repos.map((repo) => (
             <RepoCard key={repo.name} repo={repo} />
           ))}
