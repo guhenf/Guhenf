@@ -1,12 +1,10 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import Repo from '../types/repos'
-import RepoCard from '../components/repoCard'
+import GithubSection from '../components/GithubSection'
 import meImg from '../assets/me.jpeg'
-import githubProfile from '../assets/github_profile.jpg'
 import { LinkedlnIcon } from '../svg/linkedin.tsx'
 import { GithubIcon } from '../svg/github.tsx'
+import Repo from '../types/repos.ts'
 
 const techs = [
   'HTML',
@@ -34,8 +32,8 @@ function Main() {
   }, [])
 
   return (
-    <section className='flex-grow'>
-      <div className='py-8 grid grid-cols-2 w-fit '>
+    <main className='flex-grow'>
+      <section className='py-8 grid grid-cols-2 w-fit '>
         <img
           src={meImg}
           className='max-w-32 rounded-full row-span-2 mr-6 ring-4 ring-slate-300'
@@ -49,9 +47,9 @@ function Main() {
             <GithubIcon />
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className='leading-relaxed my-6'>
+      <section className='leading-relaxed my-6'>
         <p>
           Iniciei meus estudos em Desenvolvimento Web em busca de uma
           recolocação no mercado de trabalho. Desde jovem, tive contato com
@@ -80,22 +78,9 @@ function Main() {
             <li>{tech}</li>
           ))}
         </ul>
-      </div>
-
-      <h2 className='text-xl mb-2 font-bold'>
-        Projetos pessoais e públicos em meu github!
-      </h2>
-      <div className='grid grid-cols-3'>
-        <img src={githubProfile} className='w-full rounded-l-lg' />
-        <div className='bg-gray-900  grid col-span-2 rounded-r-lg'>
-          <ul className='h-full w-full grid gap-2 text-xl py-8'>
-            {repos.map((repo) => (
-              <RepoCard key={repo.name} repo={repo} />
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
+      <GithubSection repos={repos} />
+    </main>
   )
 }
 
