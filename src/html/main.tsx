@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import GithubSection from '../components/GithubSection'
+import GithubSection from '../components/GithubSection.tsx'
 import meImg from '../assets/me.jpeg'
 import { LinkedlnIcon } from '../svg/linkedin.tsx'
 import { GithubIcon } from '../svg/github.tsx'
