@@ -1,5 +1,5 @@
 import React from 'react'
-import RepoCard from '../components/repoCard'
+import RepoCard from './RepoCard'
 import Repo from '../types/repos'
 
 function GithubSection({ repos }) {
