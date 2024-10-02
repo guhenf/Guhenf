@@ -75,7 +75,7 @@ function Main() {
 
         <ul className='grid grid-rows-5 grid-flow-col list-disc px-6'>
           {techs.map((tech) => (
-            <li>{tech}</li>
+            <li key={tech}>{tech}</li>
           ))}
         </ul>
       </section>
